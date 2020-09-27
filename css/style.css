@@ -1,0 +1,55 @@
+body {
+    margin: 0px;
+}
+
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+    float: right;
+    margin: 6px;
+}
+
+.nav li {
+	display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+.nav h1 {
+    margin: 4px;
+    display: inline-block;
+    color: white;
+    font-family: 'Leckerli One', cursive;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Leckerli One', cursive;
+}
+
+.nav {
+	background-color: #2f2f2f;
+	height: 50px;
+}
+
+.img_login img {
+    width: 1280px;
+    height: 690px;
+    float: left;
+}
+
+.form {
+    float: right;
+    height: 0px;
+    padding-right: 15px;
+    color: white;
+}
+.form p {
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+}

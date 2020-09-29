@@ -1,7 +1,6 @@
 <?php require('inc_connexion.php');?>
-<?php require('inc_header.php') ?>
+<?php require('inc_header.php');?>
 <?php
-	session_start();
 	if (isset($_SESSION['user_login']))
 		header('location:index.php');
 	
@@ -48,12 +47,4 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <div class="img_login">
 	<img src="images/fond_login.jpg" alt="image fond">
-</div>
-<div class="form">
- 	<form method="post">
- 	<?php if(isset($message)) echo $message ?>
- 	<p>Identifiant : <input type="text" name="user_input_login"> 
-	<p>Mot de passe : <input type="password" name="user_input_password"></p>
-	<input type="submit" name="submit_form" value="valider"></p>
- 	</form>
 </div>

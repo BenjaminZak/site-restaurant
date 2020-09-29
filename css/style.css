@@ -38,7 +38,7 @@ ul {
 
 .img_login img {
     width: 1280px;
-    height: 690px;
+    height: 640px;
     float: left;
 }
 
@@ -52,4 +52,8 @@ ul {
     display: inline-block;
     text-align: center;
     border-radius: 2px;
+}
+
+.left {
+    margin-right: 15px;
 }

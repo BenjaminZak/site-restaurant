@@ -1,5 +1,4 @@
 <?php require('inc_connexion.php');?>
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,8 @@
 			 	<?php if(isset($message)) echo $message ?>
 			 	<p>Identifiant : <input type="text" name="user_input_login" class="left"> 
 				<p>Mot de passe : <input type="password" name="user_input_password"></p>
-				<input type="submit" name="submit_form" value="valider"></p>
+				<input type="submit" name="submit_form" value="Valider"></p>
+				<li><a href="inscription.php" class="inscr">Pas de compte</a></li>
 			 	</form>
 			</div>
 		</div>

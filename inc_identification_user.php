@@ -2,7 +2,8 @@
 	session_start();
 	if (!isset($_SESSION['user_login'])) {
 		echo 'Vous n\'avez pas accès à cette page.';
-		echo '<br><a href="login.php>Retour vers la page d\'authentification</a>';
+		echo '<br><a href="login.php">Retour vers la page d\'authentification</a>';
+		header('Location: login.php');
 		exit;
 	}
 	$user_login = $_SESSION['user_login'];

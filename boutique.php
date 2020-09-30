@@ -1,3 +1,4 @@
+<?php require('inc_identification_user.php');?>
 <?php require('inc_connexion.php');?>
 <?php require('inc_header.php') ?>
 <!DOCTYPE html>

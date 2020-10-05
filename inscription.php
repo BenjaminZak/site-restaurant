@@ -1,16 +1,21 @@
-<html>
-<form method="POST" action="">
-<center>
-<h1>Inscription<h1>
-<input type="text" name="nom" size="20" placeholder="Nom" maxlength="35"> <input type="text" name="prenom" size="20" placeholder="Prénom" maxlength="35"><br>
-<input type="text" name="email" size="20" placeholder="Adresse email" maxlength="70"><br>
-<input type="password" name="password" size="20" maxlength="35" placeholder="Mot de passe"><input type="password" name="repeatpassword" size="20" maxlength="35" placeholder="Repeter mot de passe"><br>
-<input type="submit" value="Envoyer" name="envoyer">
-</center>
-</form>
-</html>
-<?php
+ <h1>Inscription<h1>
       
+    <form method="post" action="">
+        <p>Nom</p>
+        <input type="text" name="nom">
+        <p>Prenom</p>
+        <input type="text" name="prenom">
+        <p>email</p>
+        <input type="email" name="email">
+        <p>Password</p>
+        <input type="password" name="password">
+        <p>Répetez votre password</p>
+        <input type="password" name="repeatpassword"><br><br>
+        <input type="submit" name="submit" value="Valider">
+      
+    </form>
+
+<?php
 if (isset($_POST['submit']))
 {
    /* on test si les champ sont bien remplis */
@@ -25,17 +30,18 @@ if (isset($_POST['submit']))
                 // On crypte le mot de passe
                 $_POST['password']= md5($_POST['password']);
                 // on se connecte à MySQL et on sélectionne la base
-                $c = new mysqli("127.0.0.1","root","","ecobank");
+                $mysqli = new mysqli('localhost', 'root', 'root', 'site_ecommerce');
                 //On créé la requête
-                $sql = "INSERT INTO newclient VALUES ('".$_POST['id']."','".$_POST['Nom']."','".$_POST['Prenom']."','".$_POST['email']."','".$_POST['password']."')";
+                $sql = "INSERT INTO users (user_id, user_nom, user_prenom, user_login, user_password) VALUES (NULL,'".$_POST['nom']."','".$_POST['prenom']."','".$_POST['email']."','".$_POST['password']."')";
+                header('Location: index.php');
                  
                 /* execute et affiche l'erreur mysql si elle se produit */
-                if(!$c->query($sql))
+                if(!$mysqli->query($sql))
                 {
-                    printf("Message d'erreur : %s\n", $c->error);
+                    printf("Message d'erreur : %s\n", $mysqli->error);
                 }
             // on ferme la connexion
-            mysqli_close($c);
+            mysqli_close($mysqli);
             }
             else echo "Les mots de passe ne sont pas identiques";
         }

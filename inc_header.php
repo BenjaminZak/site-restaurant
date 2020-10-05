@@ -9,12 +9,12 @@
 		<div class="nav">
 			<h1>Restaurant chez Zaken</h1>
 			<div class="form">
-			 	<form method="post">
+			 	<form action="login.php" method="post">
 			 	<?php if(isset($message)) echo $message ?>
 			 	<p>Identifiant : <input type="text" name="user_input_login" class="left"> 
 				<p>Mot de passe : <input type="password" name="user_input_password"></p>
 				<input type="submit" name="submit_form" value="Valider"></p>
-				<li><a href="inscription.php" class="inscr">Pas de compte</a></li>
+				<li class="inscr"><a href="inscription.php">Créer un compte</a></li>
 			 	</form>
 			</div>
 		</div>

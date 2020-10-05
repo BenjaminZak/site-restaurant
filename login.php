@@ -10,7 +10,7 @@
 		// Vérification si les variables sont vides
 		if ((empty($user_input_login)) OR empty($user_input_password))
 			{
-				$message = '<p class="error">Vous devez saisir les informations demandées.</p>';
+				echo '<p class="error">Vous devez saisir les informations demandées.</p>';
 			}
 			else
 			{
@@ -28,7 +28,7 @@
 					/* la requête retourne un résultat, le login existe dans la base. Vérifions avec la fonction crypt que le mot de passe saisi correspond à celui de la base.*/
 					$user_login = $row['user_login'];
 					$user_password = $row['user_password'];
-					if (crypt($user_input_password, $user_password) != $user_password)
+					if (md5($user_input_password) != $user_password)
 					{
 						$message = '<p class="error">Erreur d\'identification.<br>Mauvais mot de passe.</p>';
 					}

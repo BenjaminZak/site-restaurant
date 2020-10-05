@@ -12,7 +12,6 @@ ul {
 
 .nav li {
 	display: inline-block;
-    width: 100px;
     text-align: center;
     padding: 8px;
     border-radius: 2px;
@@ -58,9 +57,6 @@ ul {
     margin-right: 15px;
 }
 
-.inscr {
-    width: auto;
-}
 
 .form input[type="submit"] {
     color: white;

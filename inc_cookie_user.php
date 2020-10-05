@@ -9,7 +9,7 @@ if(!isset($_COOKIE['web_user']))
 	setcookie('web_user', $web_user_id, $date);
 	//enregistrement dans la table 'user' : id du client + date de conservation du panier (deux semaines)
 	$mysqli->query('INSERT INTO users SET user_id =
-	"'.$web_user_id.'", date = "'.$date.'"');
+	"'.$web_user_id.'"'); //, date = "'.$date.'"'
 }
 else
 {
